@@ -24,7 +24,6 @@ function know4pol_core_disable() {
  */
 function know4pol_core_install() {
   module_enable(array('admin_views',
-    'ajax_comments',
     'apachesolr',
     'apachesolr_search',
     'apachesolr_attachments',
