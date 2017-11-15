@@ -34,7 +34,7 @@ projects[migrate_group_settings][version] = "1.0-beta2"
 projects[nexteuropa_newsroom][download][type] = "git"
 projects[nexteuropa_newsroom][subdir] = "custom"
 projects[nexteuropa_newsroom][download][url] = https://github.com/ec-europa/nexteuropa-newsroom-reference.git
-projects[nexteuropa_newsroom][version] = "3.4.3"
+projects[nexteuropa_newsroom][version] = "v3.4.3"
 
 projects[node_revision_delete][version] = "2.6"
 
@@ -63,6 +63,7 @@ projects[redirect][patch][] = "https://www.drupal.org/files/issues/support_migra
 
 ; ec_europa theme
 projects[ec_europa][type] = theme
+projects[ec_europa][subdir] = ""
 projects[ec_europa][download][type] = "git"
 projects[ec_europa][download][url] = https://github.com/ec-europa/ec_europa.git
 projects[ec_europa][version] = "0.0.4"
