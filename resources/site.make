@@ -60,9 +60,3 @@ projects[redirect][patch][] = "https://www.drupal.org/files/issues/support_migra
 ; ======
 ; Themes
 ; ======
-
-projects[atomium][type] = theme
-projects[atomium][subdir] = ""
-projects[atomium][download][type] = git
-projects[atomium][download][url] = https://github.com/ec-europa/atomium.git
-projects[atomium][download][branch] = 7.x-2.x
