@@ -47,6 +47,7 @@ function know4pol_core_install() {
     'migrate_extras',
     'migrate_group_settings',
     'multisite_og_button',
+    'nexteuropa_newsroom',
     'nexteuropa_varnish',
     'node_revision_delete',
     'og_menu',

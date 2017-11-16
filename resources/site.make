@@ -60,10 +60,3 @@ projects[redirect][patch][] = "https://www.drupal.org/files/issues/support_migra
 ; ======
 ; Themes
 ; ======
-
-; ec_europa theme
-projects[ec_europa][type] = theme
-projects[ec_europa][subdir] = ""
-projects[ec_europa][download][type] = "git"
-projects[ec_europa][download][url] = https://github.com/ec-europa/ec_europa.git
-projects[ec_europa][version] = "0.0.4"
