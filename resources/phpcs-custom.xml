@@ -11,6 +11,7 @@
 <ruleset name="Subsite">
     <description>Custom ruleset for subsite usage.</description>
 
+    <exclude-pattern>**/themes/ec_europa</exclude-pattern>
     <!-- New guidelines allow for use of project property. -->
     <!-- Remove comment to disable the project check on info files.
     <rule ref="Drupal.InfoFiles.AutoAddedKeys.Project">
