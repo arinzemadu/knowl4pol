@@ -20,7 +20,11 @@ projects[facetapi_bonus][version] = "1.2"
 
 projects[feeds_et][version] = "1.x"
 
+projects[feeds_ex][version] = "1.0-beta2"
+
 projects[globalredirect][version] = "1.5"
+
+projects[hierarchical_select][version] = "3.0-beta7"
 
 projects[match_redirect][version] = "1.0"
 
@@ -49,6 +53,14 @@ projects[views_rss][version] = "2.0-rc4"
 ; =========
 ; Libraries
 ; =========
+
+libraries[jsonpath][download][type] = get
+libraries[jsonpath][download][url] = ../lib/libraries/jsonpath
+libraries[jsonpath][destination] = libraries
+
+libraries[jmespath.php][download][type] = get
+libraries[jmespath.php][download][url] = ../lib/libraries/jmespath.php
+libraries[jmespath.php][destination] = libraries
 
 ; =======
 ; Patches

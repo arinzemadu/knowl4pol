@@ -75,3 +75,13 @@ function know4pol_core_install() {
     'xmlsitemap_user',
   ), TRUE);
 }
+
+/**
+ * Enable hierarchical_select and feeds_ex modules.
+ */
+function know4pol_core_update_7001() {
+  module_enable(array(
+    'hierarchical_select',
+    'feeds_ex',
+  ), TRUE);
+}

@@ -35,3 +35,11 @@ function know4pol_ec_europa_menu_link(array $variables) {
   $output = html_entity_decode($output);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Implements template_preprocess_node().
+ */
+function know4pol_ec_europa_preprocess_node(&$variables, $hook) {
+  // For all content types.
+  drupal_add_js('https://visualise.jrc.ec.europa.eu/javascripts/api/viz_v1.js', 'external');
+}
