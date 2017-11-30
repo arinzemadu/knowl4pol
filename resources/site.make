@@ -22,6 +22,8 @@ projects[feeds_et][version] = "1.x"
 
 projects[feeds_ex][version] = "1.0-beta2"
 
+projects[field_default_token][version] = "1.3"
+
 projects[globalredirect][version] = "1.5"
 
 projects[hierarchical_select][version] = "3.0-beta7"

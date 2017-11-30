@@ -82,6 +82,7 @@ function know4pol_core_install() {
 function know4pol_core_update_7001() {
   module_enable(array(
     'hierarchical_select',
+    'field_default_token',
     'feeds_ex',
   ), TRUE);
 }
