@@ -56,9 +56,10 @@ projects[views_rss][version] = "2.0-rc4"
 ; Libraries
 ; =========
 
-libraries[jsonpath][download][type] = get
-libraries[jsonpath][download][url] = ../lib/libraries/jsonpath
-libraries[jsonpath][destination] = libraries
+libraries[jsonpath][download][type] = "git"
+libraries[jsonpath][download][url] = "https://github.com/amd-miri/jsonpath"
+libraries[jsonpath][download][tag] = "v1.0"
+libraries[jsonpath][destination] = "libraries"
 
 ; =======
 ; Patches
