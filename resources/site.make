@@ -60,10 +60,6 @@ libraries[jsonpath][download][type] = get
 libraries[jsonpath][download][url] = ../lib/libraries/jsonpath
 libraries[jsonpath][destination] = libraries
 
-libraries[jmespath.php][download][type] = get
-libraries[jmespath.php][download][url] = ../lib/libraries/jmespath.php
-libraries[jmespath.php][destination] = libraries
-
 ; =======
 ; Patches
 ; =======
