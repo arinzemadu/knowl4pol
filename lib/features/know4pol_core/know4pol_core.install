@@ -86,3 +86,16 @@ function know4pol_core_update_7001() {
     'feeds_ex',
   ), TRUE);
 }
+
+/**
+ * Enable remaining ds modules.
+ */
+function know4pol_core_update_7002() {
+  module_enable(array(
+    'ds_extras',
+    'ds_format',
+    'ds_forms',
+    'ds_search',
+    'nexteuropa_formatters_views',
+  ), TRUE);
+}
