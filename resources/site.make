@@ -12,6 +12,8 @@ projects[admin_views][version] = "1.5"
 
 projects[apachesolr_sort][version] = "1.0"
 
+projects[conditional_fields][version] = "3.0-alpha2"
+
 projects[context_og][version] = "2.1"
 
 projects[expanding_formatter][version] = "1.0"
@@ -23,6 +25,8 @@ projects[feeds_et][version] = "1.x"
 projects[feeds_ex][version] = "1.0-beta2"
 
 projects[field_default_token][version] = "1.3"
+
+projects[field_validation][version] = "2.6"
 
 projects[globalredirect][version] = "1.5"
 
@@ -40,7 +44,7 @@ projects[migrate_group_settings][version] = "1.0-beta2"
 projects[nexteuropa_newsroom][download][type] = "git"
 projects[nexteuropa_newsroom][subdir] = "custom"
 projects[nexteuropa_newsroom][download][url] = https://github.com/ec-europa/nexteuropa-newsroom-reference.git
-projects[nexteuropa_newsroom][version] = "v3.4.3"
+projects[nexteuropa_newsroom][version] = "v3.4.4"
 
 projects[node_revision_delete][version] = "2.6"
 
