@@ -225,16 +225,16 @@ function know4pol_core_feeds_processor_targets_alter(&$targets, $entity_type, $b
  * @param array $value
  *   The value to map. MUST be an array.
  */
-function _know4pol_core_post_process_callback($source, $entity, $target, $value) {
+function _know4pol_core_post_process_callback(FeedsSource $source, $entity, $target, $value) {
   // First we define if the entity to change is a term or a node.
-  if ($entity->entity_type == 'taxonomy_term') {
+  if ($entity->feeds_item->entity_type == 'taxonomy_term') {
     $entity_id_key = 'tid';
   }
   else {
     $entity_id_key = 'nid';
   }
   // Then we get the status before processing the import.
-  $entity_unchanged = entity_load_unchanged($entity->entity_type, $entity->$entity_id_key);
+  $entity_unchanged = entity_load_unchanged($entity->feeds_item->entity_type, $entity->$entity_id_key);
   // The customisation of the callback is only for the field "og_group_ref".
   $existing_og_group_ref = $entity_unchanged->og_group_ref;
   // Don't do anything if we weren't given any data.
@@ -261,7 +261,7 @@ function _know4pol_core_post_process_callback($source, $entity, $target, $value)
     $handler = entityreference_get_selection_handler($info);
   }
   // Set the language of the field depending on the mapping.
-  $language = isset($mapping['language']) ? $mapping['language'] : LANGUAGE_NONE;
+  $language = LANGUAGE_NONE;
   // Iterate over all values.
   $iterator = 0;
   $field = isset($entity->$target) ? $entity->$target : array();
