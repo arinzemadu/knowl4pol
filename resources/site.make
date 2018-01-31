@@ -20,6 +20,8 @@ projects[expanding_formatter][version] = "1.0"
 
 projects[facetapi_bonus][version] = "1.2"
 
+projects[facetapi_select][version] = "1.3"
+
 projects[feeds_et][version] = "1.x"
 
 projects[feeds_ex][version] = "1.0-beta2"
