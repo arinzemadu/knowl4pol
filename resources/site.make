@@ -16,6 +16,8 @@ projects[conditional_fields][version] = "3.0-alpha2"
 
 projects[context_og][version] = "2.1"
 
+projects[date_facets][version] = "1.0"
+
 projects[expanding_formatter][version] = "1.0"
 
 projects[facetapi_bonus][version] = "1.2"

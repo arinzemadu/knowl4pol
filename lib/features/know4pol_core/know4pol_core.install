@@ -117,19 +117,12 @@ function know4pol_core_update_7003() {
 }
 
 /**
- * Enable views_data_export module.
+ * Enable some modules.
  */
 function know4pol_core_update_7004() {
   module_enable(array(
     'views_data_export',
-  ), TRUE);
-}
-
-/**
- * Enable feeds_tamper_conditional module.
- */
-function know4pol_core_update_7005() {
-  module_enable(array(
     'feeds_tamper_conditional',
+    'date_facets',
   ), TRUE);
 }
