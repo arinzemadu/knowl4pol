@@ -26,6 +26,8 @@ projects[feeds_et][version] = "1.x"
 
 projects[feeds_ex][version] = "1.0-beta2"
 
+projects[feeds_tamper_conditional][version] = "1.0-rc1"
+
 projects[field_default_token][version] = "1.3"
 
 projects[field_validation][version] = "2.6"

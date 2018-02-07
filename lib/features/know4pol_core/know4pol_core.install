@@ -124,3 +124,12 @@ function know4pol_core_update_7004() {
     'views_data_export',
   ), TRUE);
 }
+
+/**
+ * Enable feeds_tamper_conditional module.
+ */
+function know4pol_core_update_7005() {
+  module_enable(array(
+    'feeds_tamper_conditional',
+  ), TRUE);
+}
