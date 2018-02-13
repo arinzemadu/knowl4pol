@@ -225,7 +225,7 @@ function know4pol_core_feeds_processor_targets_alter(&$targets, $entity_type, $b
  * @param array $value
  *   The value to map. MUST be an array.
  */
-function _know4pol_core_post_process_callback(FeedsSource $source, $entity, $target, $value) {
+function _know4pol_core_post_process_callback(FeedsSource $source, $entity, $target, array $value) {
   // First we define if the entity to change is a term or a node.
   if ($entity->feeds_item->entity_type == 'taxonomy_term') {
     $entity_id_key = 'tid';

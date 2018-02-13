@@ -124,5 +124,7 @@ function know4pol_core_update_7004() {
     'views_data_export',
     'feeds_tamper_conditional',
     'date_facets',
+    'nexteuropa_theme_settings',
+    'nexteuropa_inpage_nav',
   ), TRUE);
 }
