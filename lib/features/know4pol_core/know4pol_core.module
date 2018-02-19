@@ -332,3 +332,46 @@ function _know4pol_core_post_process_callback(FeedsSource $source, $entity, $tar
     $entity->{$target} = $field;
   }
 }
+
+/**
+ * Implements hook_feeds_presave().
+ */
+function know4pol_core_feeds_presave(FeedsSource $source, $entity, $item, $entity_id) {
+  // Check first if we have any topics from Newsroom.
+  if (!empty($entity->field_newsroom_topics[LANGUAGE_NONE])) {
+    foreach ($entity->field_newsroom_topics[LANGUAGE_NONE] as $value) {
+      $matched_term_in_tags = "";
+      $matched_term_in_knowledge_service_og = "";
+      // For each topic, first we load it,
+      // in order to get its category and name.
+      $entity_term = taxonomy_term_load($value['tid']);
+      // If the category is "Knowledge4Policy Keywords".
+      if ($entity_term->field_newsroom_category_domain[en][0]['value'] == "Knowledge4Policy Keywords") {
+        // Then we search its equivalent in "tags" vocabulary.
+        $matched_term_in_tags = taxonomy_get_term_by_name($entity_term->name, 'tags');
+        if (!empty($matched_term_in_tags)) {
+          $matched_term_in_tags = array_shift($matched_term_in_tags);
+          // Add the tag to the imported entity.
+          $entity->field_tags[LANGUAGE_NONE][]['tid'] = $matched_term_in_tags->tid;
+        }
+      }
+      // Else if the category is "Knowledge Service".
+      elseif ($entity_term->field_newsroom_category_domain[en][0]['value'] == "Knowledge Service") {
+        // Then we search in "knowledge_centre" content type.
+        // because it's a node reference.
+        $query = new EntityFieldQuery();
+        $matched_term_in_knowledge_service_og = $query->entityCondition('entity_type', 'node')
+          ->propertyCondition('type', 'knowledge_centre')
+          ->propertyCondition('title', $entity_term->name)
+          ->propertyCondition('status', 1)
+          ->range(0, 1)
+          ->execute();
+        if (!empty($matched_term_in_knowledge_service_og)) {
+          $matched_term_in_knowledge_service_og = array_shift($matched_term_in_knowledge_service_og['node']);
+          // Add the related OG group to the imported entity.
+          $entity->og_group_ref[LANGUAGE_NONE][]['target_id'] = $matched_term_in_knowledge_service_og->nid;
+        }
+      }
+    }
+  }
+}
